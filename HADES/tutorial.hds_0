@@ -1,0 +1,11 @@
+# hades.models.Design file
+#  
+[name] unnamed
+[components]
+hades.models.gates.And2 i1 14400 4200 @N 1001 1.0E-8
+hades.models.rtlib.arith.Addc i0 8400 1200 @N 1001 16 UUUUUUUUUUUUUUUU_B 1.0E-8
+hades.models.Design full-adder 2400 4200 @N 1001 C:/Users/scatt_000/Desktop/Processors/HADES/full-adder.hds
+[end components]
+[signals]
+[end signals]
+[end]

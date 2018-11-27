@@ -1,0 +1,18 @@
+# hades.models.Design file
+#  
+[name] half-adder
+[components]
+hades.models.io.Ipin B 6600 4800 @N 1001  U
+hades.models.io.Opin SUM 15000 4200 @N 1001 5.0E-9
+hades.models.io.Ipin A 6600 3600 @N 1001 null U
+hades.models.gates.And2 i3 9600 6000 @N 1001 1.0E-8
+hades.models.gates.Or2 i2 9600 3000 @N 1001 1.0E-8
+hades.models.io.Opin CARRY 15000 7200 @N 1001 5.0E-9
+[end components]
+[signals]
+hades.signals.SignalStdLogic1164 n3 2 i3 Y CARRY A 1 2 13200 7200 15000 7200 0 
+hades.signals.SignalStdLogic1164 n2 2 i2 Y SUM A 1 2 13200 4200 15000 4200 0 
+hades.signals.SignalStdLogic1164 n1 3 B Y i2 B i3 A 4 2 8400 4800 9600 4800 2 6600 4800 8400 4800 2 8400 4800 8400 6600 2 8400 6600 9600 6600 1 8400 4800 
+hades.signals.SignalStdLogic1164 n0 3 A Y i2 A i3 B 4 2 7800 3600 9600 3600 2 6600 3600 7800 3600 2 7800 3600 7800 7800 2 7800 7800 9600 7800 1 7800 3600 
+[end signals]
+[end]

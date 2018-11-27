@@ -1,0 +1,31 @@
+# hades.models.Design file
+#  
+[name] unnamed
+[components]
+hades.models.io.Opin 2\u005e1 16200 7800 @N 1001 5.0E-9
+hades.models.io.Opin 2\u005e0 16200 4200 @N 1001 5.0E-9
+hades.models.gates.InvSmall i6 5400 600 @N 1001 5.0E-9
+hades.models.io.Ipin RESET 4200 1200 @N 1001 null U
+hades.models.flipflops.Dff i2 11400 10800 @N 1001 5.0E-9 4.0E-9 3.0E-9
+hades.models.flipflops.Dff i1 11400 7200 @N 1001 5.0E-9 4.0E-9 3.0E-9
+hades.models.flipflops.Dff i0 11400 3600 @N 1001 5.0E-9 4.0E-9 3.0E-9
+hades.models.Design half-adder2 4200 10800 @N 1001 C:/Users/scatt_000/Desktop/Processors/HADES/half-adder.hds
+hades.models.Design half-adder1 4200 7200 @N 1001 C:/Users/scatt_000/Desktop/Processors/HADES/half-adder.hds
+hades.models.Design half-adder 4200 3600 @N 1001 C:/Users/scatt_000/Desktop/Processors/HADES/half-adder.hds
+hades.models.io.Ipin CLK 5400 15000 @N 1001 null U
+hades.models.io.Opin 2\u005e2 16200 11400 @N 1001 5.0E-9
+[end components]
+[signals]
+hades.signals.SignalStdLogic1164 n9 2 RESET Y i6 A 1 2 4200 1200 5400 1200 0 
+hades.signals.SignalStdLogic1164 n8 2 half-adder1 CARRY half-adder2 B 5 2 9000 8400 10200 8400 2 10200 8400 10200 9600 2 10200 9600 2400 9600 2 2400 9600 2400 12000 2 2400 12000 4200 12000 0 
+hades.signals.SignalStdLogic1164 n7 2 half-adder CARRY half-adder1 B 5 2 9000 4800 9600 4800 2 9600 4800 9600 3000 2 9600 3000 2400 3000 2 2400 3000 2400 8400 2 2400 8400 4200 8400 0 
+hades.signals.SignalStdLogic1164 n6 2 half-adder2 SUM i2 D 1 2 9000 11400 11400 11400 0 
+hades.signals.SignalStdLogic1164 n5 2 half-adder1 SUM i1 D 1 2 9000 7800 11400 7800 0 
+hades.signals.SignalStdLogic1164 n4 2 half-adder SUM i0 D 1 2 9000 4200 11400 4200 0 
+hades.signals.SignalStdLogic1164 n3 3 i2 Q 2^2 A half-adder2 A 6 2 15600 11400 16200 11400 2 15000 11400 15600 11400 2 15600 11400 15600 10200 2 15600 10200 3600 10200 2 3600 10200 3600 11400 2 3600 11400 4200 11400 1 15600 11400 
+hades.signals.SignalStdLogic1164 n2 3 i1 Q 2^1 A half-adder1 A 6 2 15600 7800 16200 7800 2 15000 7800 15600 7800 2 15600 7800 15600 6600 2 15600 6600 3600 6600 2 3600 6600 3600 7800 2 3600 7800 4200 7800 1 15600 7800 
+hades.signals.SignalStdLogic1164 n1 3 i0 Q 2^0 A half-adder A 6 2 15600 4200 16200 4200 2 15000 4200 15600 4200 2 15600 4200 15600 2400 2 15600 2400 3600 2400 2 3600 2400 3600 4200 2 3600 4200 4200 4200 1 15600 4200 
+hades.signals.SignalStdLogic1164 n0 4 CLK Y i0 C i1 C i2 C 7 2 5400 15000 9600 15000 2 9600 9000 9600 5400 2 9600 5400 11400 5400 2 9600 12600 9600 9000 2 9600 9000 11400 9000 2 9600 15000 9600 12600 2 9600 12600 11400 12600 2 9600 9000 9600 12600 
+hades.signals.SignalStdLogic1164 n10 2 i6 Y half-adder B 5 2 7200 1200 7800 1200 2 7800 1200 7800 1800 2 7800 1800 3000 1800 2 3000 1800 3000 4800 2 3000 4800 4200 4800 0 
+[end signals]
+[end]

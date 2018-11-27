@@ -1,0 +1,24 @@
+# hades.models.Design file
+#  
+[name] full-adder
+[components]
+hades.models.io.Opin SUM 25200 600 @N 1001 5.0E-9
+hades.models.io.Ipin B 3000 2400 @N 1001 null U
+hades.models.io.Ipin A 3000 -600 @N 1001 null U
+hades.models.gates.Or2 i5 19200 1800 @N 1001 1.0E-8
+hades.models.io.Opin CARRY_OUT 25200 3000 @N 1001 5.0E-9
+hades.models.Design half-adder1 13200 0 @N 1001 C:/Users/scatt_000/Desktop/Processors/HADES/half-adder.hds
+hades.models.Design half-adder 4800 0 @N 1001 C:/Users/scatt_000/Desktop/Processors/HADES/half-adder.hds
+hades.models.io.Ipin CARRY_IN 9600 -1200 @N 1001 null U
+[end components]
+[signals]
+hades.signals.SignalStdLogic1164 n7 2 half-adder1 SUM SUM A 1 2 18000 600 25200 600 0 
+hades.signals.SignalStdLogic1164 n6 2 half-adder1 CARRY i5 A 3 2 18000 1200 18600 1200 2 18600 1200 18600 2400 2 18600 2400 19200 2400 0 
+hades.signals.SignalStdLogic1164 n5 2 half-adder CARRY i5 B 4 2 9600 1200 10800 1200 2 10800 1200 10800 2400 2 10800 2400 10800 3600 2 10800 3600 19200 3600 0 
+hades.signals.SignalStdLogic1164 n4 2 half-adder SUM half-adder1 B 3 2 9600 600 11400 600 2 11400 600 11400 1200 2 11400 1200 13200 1200 0 
+hades.signals.SignalStdLogic1164 n3 2 CARRY_IN Y half-adder1 A 3 2 9600 -1200 12600 -1200 2 12600 -1200 12600 600 2 12600 600 13200 600 0 
+hades.signals.SignalStdLogic1164 n2 2 i5 Y CARRY_OUT A 1 2 22800 3000 25200 3000 0 
+hades.signals.SignalStdLogic1164 n1 2 B Y half-adder B 3 2 3000 2400 3600 2400 2 3600 2400 3600 1200 2 3600 1200 4800 1200 0 
+hades.signals.SignalStdLogic1164 n0 2 A Y half-adder A 3 2 3000 -600 3600 -600 2 3600 -600 3600 600 2 3600 600 4800 600 0 
+[end signals]
+[end]
