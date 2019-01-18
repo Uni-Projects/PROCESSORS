@@ -1,0 +1,15 @@
+# hades.models.Design file
+#  
+[name] 22to32bit
+[components]
+hades.models.rtlib.io.Constant i3 17400 3600 @N 1001 5 00000_B 1.0E-8
+hades.models.rtlib.io.OpinVector i2 19800 12000 @N 1001 32 1.0E-9 2
+hades.models.rtlib.io.IpinVector i1 14400 6600 @N 1001 22 0000000000000001001111_B 1.0E-9 0
+hades.models.rtlib.io.Merge3 i0 18600 8400 @N 1001 32 22 5 5 00000000000000010011110000000000_B 1.0E-8
+[end components]
+[signals]
+hades.signals.SignalStdLogicVector n2 32 2 i0 Y i2 A 2 2 18600 9000 18600 12000 2 18600 12000 19800 12000 0 
+hades.signals.SignalStdLogicVector n1 22 2 i1 Y i0 A 2 2 18000 8400 18000 6600 2 18000 6600 14400 6600 0 
+hades.signals.SignalStdLogicVector n0 5 3 i3 Y i0 C i0 B 4 2 19200 7200 19200 8400 2 19200 5400 19200 7200 2 19200 7200 18600 7200 2 18600 7200 18600 8400 1 19200 7200 
+[end signals]
+[end]
